@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity(),AdapterView. OnItemSelectedListener{
             println("map key: " + test.size)
             // add filter by map key: in logcat
             // done in one hour or two so please refactor since this is a POC
-            // make sure you have populated the main array with values based on values
+            // make sure you have populated the main array based on keys
             // your method should return an listArray as a single source of truth
         }
         else if(arg0.id == R.id.spinner_sample1)
