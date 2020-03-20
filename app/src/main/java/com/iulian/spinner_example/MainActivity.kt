@@ -58,13 +58,16 @@ class MainActivity : AppCompatActivity(),AdapterView. OnItemSelectedListener{
 
         //reset the first element that is auto selected by the adaptor - find a better way
         map.put(questions[position] , 0)
+        for (i in 0..3) {
+            map.put(questions[i] , 0)
+        }
         if(arg0.id == R.id.spinner_sample)
+
         {
+
             // create a method to deal with all of this and apply it to all the spinners
             //reset the listArray before selecting - find a better way
-            for (i in 1..3) {
-                map.put(questions[i] , 0)
-            }
+
             // mark the selected question in the map
             map.put(questions[position], 1)
             //output values
