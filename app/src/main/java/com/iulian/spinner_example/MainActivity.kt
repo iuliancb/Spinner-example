@@ -56,18 +56,17 @@ class MainActivity : AppCompatActivity(),AdapterView. OnItemSelectedListener{
 
     override fun onItemSelected(arg0: AdapterView<*>, view: View, position: Int, id: Long) {
 
-        //reset the first element that is auto selected by the adaptor - find a better way
+        //reset the first element that is auto selected by the adapter - find a better way
         map.put(questions[position] , 0)
+        // clean all map before selecting new all the time
+        //reset the listArray before selecting - find a better way
         for (i in 0..3) {
             map.put(questions[i] , 0)
         }
         if(arg0.id == R.id.spinner_sample)
 
         {
-
             // create a method to deal with all of this and apply it to all the spinners
-            //reset the listArray before selecting - find a better way
-
             // mark the selected question in the map
             map.put(questions[position], 1)
             //output values
@@ -81,12 +80,12 @@ class MainActivity : AppCompatActivity(),AdapterView. OnItemSelectedListener{
             println("map key: " + test.size)
             // add filter by map key: in logcat
             // done in one hour or two so please refactor since this is a POC
-
+            //make sure you have populated the main array with values based on keys from ilteredKeysMap.keys
+            // your method should return an listArray as a single source of truth
         }
         else if(arg0.id == R.id.spinner_sample1)
         {
-
-
+            // use the same method you have done to deal with spinners
 
         }
 
